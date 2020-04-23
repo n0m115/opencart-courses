@@ -1,0 +1,27 @@
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="col-sm-4 first">{{ footer_left }}</div>
+            <div class="col-sm-4 second">{{ footer_bottom }}</div>
+            <div class="col-sm-4 third">{{ footer_right }}</div>
+        </div>
+        <div class="content_footer_top"><div class="container">{{ footer_top }}</div></div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="powered">{{ powered }}</div>
+        </div>
+    </div>
+</footer>
+
+{% for script in scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+<!-- Theme created by Welford Media for OpenCart 2.0 www.welfordmedia.co.uk -->
+</body></html>

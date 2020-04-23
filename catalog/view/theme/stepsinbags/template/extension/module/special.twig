@@ -1,0 +1,112 @@
+<div class="box special-block">
+<div class="container">
+<div class="row">
+ <!--  <div class="box-heading">This Week's Hot Deals</div> -->
+  <div class="box-content products">
+		{% set sliderFor = 2 %}
+		{% set productCount = products|length %}
+	<div class="box-product" id="{% if productCount >= sliderFor %}special-carousel{% else %} special-grid{% endif %}">
+  {% for product in products %}
+  	{% if productCount >= sliderFor %}
+		 <div class="product-items col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	{% else %}
+		 <div class="product-items col-lg-3 col-md-4 col-sm-4 col-xs-6">
+	{% endif %}
+    <div class="product-block product-thumb transition">
+	  <div class="product-block-inner">	  	
+		<div class="image-block">
+			{% if product.thumb_link %}
+			<div class="image"><a href="{{ product.href }} "><img src="{{ product.thumb }} " alt="{{ product.name }} " title="{{ product.name }} " class="img-responsive" /></a></div>
+			{% endif %}
+	        {% if not product.special %}        
+			  {% else %}   
+			<span class="saleicon sale">Sale</span>  
+           {% endif %}
+
+			{% for  image in images %}
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="product-block">		
+        			<a href="{{ image.popup }}" title="{{ heading_title }}" class="elevatezoom-gallery" data-image="{{ image.thumb }}" data-zoom-image="{{ image.popup }}"><img src="{{ image.thumb }}" width="74" height="74" title="{{ heading_title }}" alt="{{ heading_title }}" /></a>
+				</div>
+				</div>		
+	        {% endfor %}
+            	<div class="button-group">
+            		  <button type="button" data-toggle="" data-placement="top" title="Add to cart" class="addtocart" onclick="cart.add('{{ product.product_id }} ');">{{ button_cart }}<!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i> -->
+                 </button>
+				<button class="wishlist" type="button" data-toggle="tooltip" data-placement="top" title="{{ button_wishlist }} " onclick="wishlist.add('{{ product.product_id }} ');"><i class="fa fa-heart"></i></button>
+				<button class="compare" type="button" data-toggle="tooltip" data-placement="top" title="{{ button_compare }} " onclick="compare.add('{{ product.product_id }} ');"><i class="fa fa-exchange"></i></button>
+				<div class="quickview" data-toggle="tooltip" data-placement="top" title="Quickview" ><a href="{{ product.quick }}">Quick View<i class="fa fa-eye" aria-hidden="true"></i></a></div>
+			</div>	
+
+		</div>
+      	<div class="product-details">
+
+			<div class="caption">
+				<h4><a href="{{ product.href }} ">{{ product.name }} </a></h4>
+				{% if product.rating %}
+       				 <div class="rating">
+         			 {% for i in 1..5 %}
+         			 {% if product.rating < i %}
+         			 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
+          		     {% else %}
+          			 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i><i class="fa fa-star-o fa-stack-2x"></i></span>
+          			 {% endif %}
+          			 {% endfor %}
+       				 </div>
+        		{% endif %}
+
+        			{% if product.price %}
+        			<p class="price">
+       			    {% if not product.special %}
+          			{{ product.price }}
+         			{% else %}
+         			<span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+			        {% endif %}
+  		            {% if product.tax %}
+		            <span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
+          			{% endif %}
+			        </p>
+	            {% endif %}
+	            
+				  <p class="desc">{{ product.description }}</p>
+				
+						
+			</div>		
+			
+			<div class="countdown">
+
+			 {% if product.specialTime %}
+				<div class="count-down clock">
+					<div data-countdown="{{ product.specialTime }}" class="countbox hastime"></div>
+				</div>	
+			{% endif %}
+			</div>
+	  	</div>
+	</div>
+	</div>
+</div>
+  
+ {% endfor %}
+</div>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+$('#content #special-carousel').owlCarousel({
+    items: 1,
+	navigation: true,
+	navigationText: ['<span class="left"><a class="fa prev">&nbsp;</a></span>', '<span class="right"><a class="fa next">&nbsp;</a></span>'],
+	pagination: false,
+	itemsCustom : [
+        [0, 1],
+        [479, 1],
+        [480, 1],
+        [767, 1],
+        [768, 1],
+        [1199, 1],
+        [1200, 1],
+      ]
+  });
+</script>
+

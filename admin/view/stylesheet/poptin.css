@@ -1,0 +1,164 @@
+/**
+* 2007-2019 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2019 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+body{ margin:0; padding:0; color:#000; font-family: 'Open Sans', sans-serif;}
+
+#poptin_main h1, #poptin_main h2 ,#poptin_main h3, #poptin_main h4, #poptin_main h5, #poptin_main h6, #poptin_main p, #poptin_main ul li { font-family: 'Open Sans', sans-serif;}
+#poptin_main { font-family: 'Open Sans', sans-serif; width: 1078px; margin: 51px auto 20px; border: 1px solid #e4e4e4; background: #FCFCFC; padding-bottom: 0;box-shadow: -7px 5px 16px 0px rgba(4, 4, 4, 0.35);}
+#poptin_main .poptinLogo { text-align: center; padding:50px 0;  vertical-align: middle;}
+#poptin_main .poptinLogo img{ max-width:365px; vertical-align:middle;}
+
+#poptin_main .poptin_forms{ margin:0 0 40px;}
+#poptin_main .poptin_forms .register_form{ background:url(../image/poptin/accountboxsignup.png) no-repeat;}
+#poptin_main .poptin_forms .login_form{background:url(../image/poptin/accountbox.png) no-repeat;}
+#poptin_main .poptin_forms .pforms_wrap { width: 699px; height: 268px; margin: 0 auto; padding-top: 9px;}
+#poptin_main .poptin_forms .pforms_wrap .pforms_wrap_inner {max-width: 525px; margin: 0 auto; padding-top: 35px;}
+
+#poptin_main .poptin_forms .pforms_head { text-align:left; margin:0 0 10px;}
+#poptin_main .poptin_forms .pforms_head ul{ margin:0; padding:0;}
+#poptin_main .poptin_forms .pforms_head ul li{ display:inline-block; position:relative; padding:0 10px ; font-size: 17px; font-weight: 400; margin-right:-4px;}
+#poptin_main .poptin_forms .pforms_head ul li::after { background: #fff; width: 1px; height: 25px; content: ""; position: absolute; right: 0;top: 10px;}
+#poptin_main .poptin_forms .pforms_head ul li:last-child:after{ display:none; }
+#poptin_main .poptin_forms .pforms_head ul li:first-child{ padding-left:0;}
+#poptin_main .poptin_forms .pforms_head ul li h3 {color: #ffffff;font-size: 28px;font-weight: 600;font-family: 'Open Sans', sans-serif; margin: 0;text-align: center; text-decoration: none; outline: 0; height: auto; text-decoration: none; border: 0; line-height: 36px; text-transform: none;}
+#poptin_main .poptin_forms .pforms_head ul li a{ color:#fff; text-decoration: underline;}
+#poptin_main .poptin_forms .pforms_head ul li a:hover { text-shadow: 2px 2px 2px black; -webkit-transition: all 200ms ease; -moz-transition: all 200ms ease; -ms-transition: all 200ms ease; -o-transition: all 200ms ease; transition: all 200ms ease;}
+
+#poptin_main .poptin_forms .pforms_wrap .pforms_wrap_inner .form_box .input_box{box-sizing: border-box; border:1px solid #b7b7b7; background-color: #ffffff; width: 100%; height: 45px;color: #000000; font-size: 18px; padding:5px 12px; margin:0 0 15px;}
+#poptin_main .poptin_forms .pforms_wrap .pforms_wrap_inner .form_box .ppsubmit {display: block; float: right; text-decoration: none; font-family: 'Open Sans', sans-serif; color: #ffffff; border-radius: 23px; font-size: 25.25px; font-weight: 400; text-align: center; background-color: #000000;	width: 171px; height: 44px; border: 0; outline: 0; vertical-align: middle; cursor: pointer; -webkit-transition: all 200ms ease; -moz-transition: all 200ms ease; -ms-transition: all 200ms ease; -o-transition: all 200ms ease;transition: all 200ms ease;}
+
+#poptin_main .poptin_forms .pforms_wrap .pforms_wrap_inner .form_box .ppsubmit:hover { box-shadow: -7px 5px 16px 0px rgba(4, 4, 4, 0.35); }
+#poptin_main .poptin_forms .bottom_form{ text-align:right;}
+#poptin_main .poptin_forms .bottom_form .wheremyid {font-family: 'Open Sans', sans-serif; color: #ffffff; font-size:15px; border-bottom: 1px solid white; text-decoration: none;margin-right: 15px;	display: inline-block;	margin-top: 14px;}
+#poptin_main .poptin_forms .bottom_form .wheremyid:hover { text-shadow: 2px 2px 2px black; -webkit-transition: all 200ms ease; -moz-transition: all 200ms ease; -ms-transition: all 200ms ease; -o-transition: all 200ms ease; transition: all 200ms ease;}
+
+#poptin_main .poptin_content{ margin-bottom:90px; }
+#poptin_main .poptin_content.clients_feedback { margin-bottom: 40px;}
+#poptin_main .poptin_content h2 { font-family: 'Open Sans', sans-serif ; color: #242424 ; font-size: 37px ; font-weight: 400 ; text-align: center ; margin: 0 0 10px;}
+#poptin_main .poptin_content img.emoji { display: inline; border: none;  height: 1em ;  width: 1em ;  margin: 0 .07em ;  vertical-align: -.1em ;  background: 0 0 ;	padding: 0 ;box-shadow: none ;}
+
+#poptin_main .poptin_content .tinyborder { background-color: #9c2362; width: 54px; height: 10px; margin: 0 auto 20px; border-radius: 13px;}
+#poptin_main .poptin_content .pvideo_box {width: 100%; background:url(../image/poptin/youtubeBackground.png) no-repeat; height: 597px;  text-align: center;}
+#poptin_main .poptin_content .pvideo_box .pvideo_box_in{ display: inline-block; overflow: hidden; padding-top: 43px; border-radius: 11px; z-index: 22; position: relative;	margin: 0 auto; }
+#poptin_main .poptin_content .pcontent_in{ padding:0 30px;}
+
+#poptin_main .whychoose_list ul{ list-style:none; margin:0; padding:0;} 
+#poptin_main .whychoose_list ul li{ width: 230px; margin-right:28px;  display: inline-block; vertical-align: top; }
+#poptin_main .whychoose_list ul li:last-child{ margin:0;}
+#poptin_main .whychoose_list ul li .box { width: 100%; border-radius: 7px;height: 230px; position: relative; -webkit-transition: all 200ms ease; -moz-transition: all 200ms ease; -ms-transition: all 200ms ease; -o-transition: all 200ms ease;  transition: all 200ms ease;}
+#poptin_main .whychoose_list ul li .box:hover { box-shadow: -7px 5px 16px 0px rgba(4, 4, 4, 0.35);}
+#poptin_main .whychoose_list ul li .box .boxIcon { padding-top: 43px; text-align:center;}
+#poptin_main .whychoose_list ul li .box h4 { color: #ffffff; font-size: 20px; text-align: center; font-weight:400; position: absolute; bottom: 20px; line-height: 25px; margin:0; left: 0;right: 0;}
+#poptin_main .whychoose_list ul li .boxEnv { background-color: #9c2362; }
+#poptin_main .whychoose_list ul li .boxLeads {	background-color: #28919e;}
+#poptin_main .whychoose_list ul li .boxCart {background-color: #eca916;}
+#poptin_main .whychoose_list ul li .boxHeart {	background-color: #ef5451;}
+
+
+#poptin_main .cfedbak_list ul{ list-style:none; margin:0; padding:0;} 
+#poptin_main .cfedbak_list ul li{ width: 317px; margin-right:28px;  display: inline-block; vertical-align: top; }
+#poptin_main .cfedbak_list ul li:last-child{ margin:0;}
+#poptin_main .cfedbak_list ul li .box { border-radius:7px; background-color:#ffffff; border:1px solid #ebebeb;width:100%; height: 462px; -webkit-transition: all 200ms ease;-moz-transition: all 200ms ease;-ms-transition: all 200ms ease;	-o-transition: all 200ms ease;transition: all 200ms ease;}
+#poptin_main .cfedbak_list ul li .box:hover { box-shadow: -7px 5px 16px 0px rgba(4, 4, 4, 0.35);}
+
+#poptin_main .cfedbak_list ul li .box .box_head { width: 315px; height: auto; 	padding-top: 50px; text-align:center;}
+
+#poptin_main .cfedbak_list ul li .box.client1 .box_head{ background:url(../image/poptin/client1bg.png) no-repeat;}
+#poptin_main .cfedbak_list ul li .box.client2 .box_head{ background:url(../image/poptin/client2bg.png) no-repeat;}
+#poptin_main .cfedbak_list ul li .box.client3 .box_head{ background:url(../image/poptin/client3bg.png) no-repeat;}
+
+#poptin_main .clientboxtext { color: #898989;line-height: 21px; font-size: 17px; font-weight: 400; text-align: center; transform: scaleX(1.0622); padding-left: 30px; padding-right: 30px; padding-top: 20px;}
+#poptin_main .clientboxtext h4 {	display: block; margin:0; line-height: 23px; color: #898989; font-size: 18px; font-weight: 700; text-align: center;}
+#poptin_main .clientboxtext h6 { display: block; margin:0 0 20px; color: #898989; font-size: 16px;  font-weight: 400;  text-align: center; transform: scaleX(1.0622);}
+#poptin_main .clientboxtext p{ margin:0; padding:0;}
+
+#poptin_main .reviewbox{ background:url(../image/poptin/reviewframe.png) no-repeat;width: 1009px; box-sizing: border-box; height: 349px;margin: 0 auto;padding-top: 35px;}
+#poptin_main .reviewbox .reviewtitle { color: #ffffff; font-size: 24px; font-weight: 400; text-align: center;  line-height: 30px;  padding: 0 55px;}
+#poptin_main .reviewstars { margin-top: 34px; text-align: center; margin-bottom: 49px; }
+#poptin_main .reviewlink a {background-color: #000000;width: 385px; height: 73px;display: block;	margin: 0 auto;	line-height: 73px;	text-decoration: none;	border-radius: 50px;color: #ffffff;	font-size: 44.44px;	font-weight: 400;text-align: center;webkit-transition: all 200ms ease;-moz-transition: all 200ms ease;-ms-transition: all 200ms ease;-o-transition: all 200ms ease;	ransition: all 200ms ease;}
+#poptin_main .reviewlink a:hover {box-shadow: -7px 5px 16px 0px rgba(4, 4, 4, 0.35);}
+
+#poptin_main .poptin_footer { padding-bottom:50px;}
+#poptin_main .poptin_footer .poptin_footer_img{ margin:auto; width:150px; position:relative; height:150px;}
+#poptin_main .poptin_footer .poptin_footer_img .parrot {  max-width: 150px; max-height: 150px; height: 150px;}
+#poptin_main .poptin_footer .poptin_footer_img .hover_img{ display:none;}
+#poptin_main .poptin_footer .poptin_footer_img:hover .normal_img{ display:none;}
+#poptin_main .poptin_footer .poptin_footer_img:hover .hover_img{ display:block; position:absolute; top:0; left:0; }
+#poptin_main .poptin_footer h6 { display: block; color: #242424; font-size: 24px; font-weight: 400; margin:0; line-height: 41.595px; text-align: center;}
+#poptin_main .poptin_footer h6 a:hover{color: #000 ; text-shadow: -7px 5px 16px rgba(4, 4, 4, 0.35);}
+
+
+#poptin_main .poptin_logged{}
+#poptin_main .poptin_logged_box { border-radius: 10px; background:url(../image/poptin/loggedinbg.png) no-repeat; width: 731px; box-sizing: border-box;	height: 446px; margin: 0 auto 34px;	padding-top: 30px;}
+#poptin_main .poptin_logged .tinyborder { background-color: #000; width: 54px; height: 10px; margin: 0 auto 20px; border-radius: 13px;}
+#poptin_main .poptin_logged h2 { color: #242424; font-size: 35px ; font-weight: 700; text-align: center; margin:0 0 10px;}
+#poptin_main .poptin_logged span.everythinglooks { color: #242424; font-size: 22px; font-weight: 400; text-align: center; display: block; line-height: 28px; margin-top: 14px;}
+#poptin_main .poptin_logged img { display: block; margin: 20px auto;}
+#poptin_main .poptin_logged a.pplogout { display: block; color: #252525; font-size: 20px; font-weight: 400; text-decoration: underline; text-align: center; margin-top: 15px;}
+#poptin_main .poptin_logged a.ppcontrolpanel { color: #ffffff; font-size: 35px ; font-weight: 400; text-align: center; display: block; background-color: #000000; box-shadow: -7px 5px 16px 0px rgba(4, 4, 4, 0.35);width: 426px; height: 62px; margin: 0 auto;	line-height: 62px; text-decoration: none; border-radius: 50px;}
+
+
+#poptin_main  .modal .modal-sm{ width: 500px ;}
+#poptin_main  .modal .modal-sm .modal-content{ padding: 30px 10px 0px 10px; min-height: 210px ;}
+#poptin_main  .poptin-parrot-makingsure-image { height: 194px; width: auto; position: absolute; left: -48px; bottom: -18px;}
+#poptin_main  .poptin-parrot-byebye-image { width: 245px; height: auto; position: absolute; left: -112px; bottom: -3px;}
+#poptin_main  .modal-content h4 { font-family: 'Open Sans', sans-serif; font-style: normal; font-weight: bold; line-height: normal; font-size: 30px; margin:0 0 8px; text-align: center; color: #828282;}
+#poptin_main  .modal-content p { width: 250px; font-style: normal; font-weight: normal; font-size: 16px; text-align: center; color: #828282; line-height: 1.6; margin:auto;}
+#poptin_main  .byebyeModal .modal-content p { margin:0 auto 10px;}
+#poptin_main  .poptup_button { margin:0 0 5px;}
+#poptin_main  .popup_down a{line-height: normal; font-size: 14px; text-align: center;  text-decoration: underline; color: #828282;  cursor: pointer; clear: both;  max-width: 300px; 	margin: auto;}
+#poptin_main  .popup_down { text-align: center; padding-top: 10px; font-size:16px;}
+#poptin_main  .popup_down .poptup_button  a{ text-align: center; background: linear-gradient(180deg, #333333 0%, #4F4F4F 100%); border-radius: 17px; padding: 3px 25px 3px 25px;  color: #fff; transition: all linear 0.3s; display: inline-block;text-decoration: none;}
+#poptin_main  .popup_down .poptup_button  a:hover{ transition: all linear 0.3s; opacity: 0.7; }
+
+#poptin_main  .id_box .id_box_img img{ max-width:100%;}
+#poptin_main  .whereis_myid .popup_down .poptup_button{ text-align:right;}
+#poptin_main  .whereis_myid .modal-content { padding: 20px; }
+
+#poptin_main .modal.in .modal-dialog {
+    margin-top: 100px;
+}
+.poptin-overlay {
+    top: 0px !important;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255,255,255,.8);
+    z-index: 12222;
+    left: 0px;
+    right: 0px;
+    background-image: url(../image/poptin/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+

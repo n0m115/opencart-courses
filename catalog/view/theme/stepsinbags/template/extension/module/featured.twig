@@ -1,0 +1,134 @@
+<div class="box featured">
+<div class="container">
+  <div class="box-heading">{{ heading_title }}</div>
+  <div class="box-content">
+		
+	<div class="featured-products">
+		{% set sliderFor = 4 %}
+		{% set productCount = products|length %}
+	{% if productCount >= sliderFor %}
+		<div class="customNavigation">
+			<a class="fa prev">&nbsp;</a>
+			<a class="fa next">&nbsp;</a>
+		</div>	
+	{% endif %}
+	<div class="box-product {% if productCount >= sliderFor %}product-carousel{% else %}productbox-grid{% endif %}" id="{% if productCount >= sliderFor %}featured-carousel{% else %}featured-grid{% endif %}">
+  
+                       {% set temp2=0 %} 
+					   
+							  {% for product in products %}
+							  
+							  {% if (productCount >= sliderFor) %}
+								{% if (productCount > 8 and temp2 % 2 == 0) %} 
+								<div class="slider-item">
+									<div>
+								{% elseif (productCount <= 8) %} 
+								<div class="slider-item">
+								{% endif %} 
+							{% else %} 
+							<div class="product-items">
+							{% endif %} 
+							  
+								
+								<div class="product-block product-thumb transition">
+								
+								  <div class="product-block-inner">	  	
+								
+										<div class="image">
+											{% if product.thumb_swap %}
+											<a href="{{ product.href }}">
+											<img src="{{ product.thumb }}" title="{{ product.name }}" alt="{{ product.name }}" class="img-responsive reg-image"/>
+											<img class="img-responsive hover-image" src="{{ product.thumb_swap }}" title="{{ product.name }}" alt="{{ product.name }}"/>
+											</a>
+											{% else %}
+											<a href="{{ product.href }}">
+											<img src="{{ product.thumb }}" title="{{ product.name }}" alt="{{ product.name }}" class="img-responsive"/></a>
+											{% endif %}
+
+											{% if not product.special %}        
+											{% else %}
+											<div class="saleback">
+											<span class="saleicon sale">Sale</span>         
+											</div>
+											{% endif %}
+												<div class="button-group">
+											<!-- <button type="button" data-toggle="tooltip" data-placement="left" title="Add to cart" class="addtocart" onclick="cart.add('{{ product.product_id }} ');">{{ button_cart }} </button>
+											<button class="wishlist" type="button" data-toggle="tooltip" data-placement="left" title="{{ button_wishlist }} " onclick="wishlist.add('{{ product.product_id }} ');"></button>
+											<button class="compare" type="button" data-toggle="tooltip" data-placement="left" title="{{ button_compare }} " onclick="compare.add('{{ product.product_id }} ');"></button>
+											<div class="quickview" data-toggle="tooltip" data-placement="left" title="{{ button_quickview }}" ><a href="{{ product.quick }}">{{ button_quickview }}</a></div> -->
+
+											<button type="button" data-toggle="tooltip" data-placement="top" title="Add to cart" class="addtocart" onclick="cart.add('{{ product.product_id }} ');">{{ button_cart }}<i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+											<button class="wishlist" type="button" data-toggle="tooltip" data-placement="top" title="{{ button_wishlist }} " onclick="wishlist.add('{{ product.product_id }} ');"><i class="fa fa-heart"></i></button>
+											<button class="compare" type="button" data-toggle="tooltip" data-placement="top" title="{{ button_compare }} " onclick="compare.add('{{ product.product_id }} ');"><i class="fa fa-exchange"></i></button>
+											<div class="quickview" data-toggle="tooltip" data-placement="top" title="Quickview" ><a href="{{ product.quick }}">Quick View<i class="fa fa-eye" aria-hidden="true"></i></a></div>
+
+
+										</div>
+										</div>
+									
+										
+											<div class="caption">
+												{# if product.rating #}
+													 <div class="rating">
+													 {% for i in 1..5 %}
+													 {% if product.rating < i %}
+													<span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+													 {% else %}
+													 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+													 {% endif %}
+													 {% endfor %}
+													 </div>
+												{# endif #}
+
+												<h4><a href="{{ product.href }} ">{{ product.name }} </a></h4>
+												{# <p class="desc"><?php echo $product['description']; ?></p> #}
+												
+												{% if product.price %}
+													<p class="price">
+													{% if not product.special %}
+													{{ product.price }}
+													{% else %}
+													<span class="price-new">{{ product.special }}</span> <span class="price-old">{{ product.price }}</span>
+													{% endif %}
+													{% if product.tax %}
+													<span class="price-tax">{{ text_tax }} {{ product.tax }}</span>
+													{% endif %}
+													{% if product.special %}
+							                        <span class="percentsaving">{{ product.percentsaving }}% off</span>
+							                      	{% endif %}
+													</p>
+												{% endif %}
+													
+												
+											
+										</div>
+									</div>
+	</div>
+	
+	
+	
+                          {% if (productCount >= sliderFor) %}
+								{% if (productCount > 8 and temp2 % 2 != 0) %} 
+								</div>
+								</div>
+								{% elseif (productCount <= 8) %} 
+								</div>
+								{% endif %} {% set temp2 = temp2 + 1 %} 
+							{% else %} 
+								</div>
+							{% endif %} 
+
+  
+                            {% endfor %}
+							
+					    {% if (productCount > 8 and temp2 % 2 != 0) %}
+							</div>
+							</div>
+						{% endif %}
+							
+</div>
+</div>
+  </div>
+ </div>
+</div>
+<span class="featured_default_width" style="display:none; visibility:hidden"></span>

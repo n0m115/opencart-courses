@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+<base href="{{ base }}" />
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" ></script>
+<!-- <link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" /> -->
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" ></script>
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet"> 
+<link href="catalog/view/theme/{{ mytemplate }}/stylesheet/stylesheet.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/{{ mytemplate }}/stylesheet/pixo/lightbox.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/magnific/magnific-popup.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/{{ mytemplate }}/stylesheet/pixo/carousel.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/{{  mytemplate }}/stylesheet/pixo/custom.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/{{  mytemplate }}/stylesheet/pixo/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/{{  mytemplate }}/stylesheet/pixo/animate.css" />
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" />
+
+
+{% if direction == 'rtl' %}
+<link rel="stylesheet" type="text/css" href="catalog/view/theme/{{ mytemplate }}/stylesheet/pixo/rtl.css">
+{% endif %}
+
+<!-- {% for style in styles %}
+<link href="style.href" type="text/css" rel="style.rel" media="style.media" />
+{% endfor %} -->
+
+<script  src="catalog/view/javascript/lightbox/lightbox-2.6.min.js"></script>
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}" ></script>
+{% endfor %}
+<script src="catalog/view/javascript/common.js" ></script>
+{% for link in links %}
+<link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+<!-- Pixothemes pixothemes.in - Start -->
+<script  src="catalog/view/javascript/pixo/custom.js"></script>
+<script  src="catalog/view/javascript/pixo/jstree.min.js"></script>
+<script  src="catalog/view/javascript/pixo/carousel.min.js"></script>
+<script  src="catalog/view/javascript/pixo/pixo.min.js"></script>
+<script  src="catalog/view/javascript/pixo/jquery.custom.min.js"></script>
+<script  src="catalog/view/javascript/pixo/jquery.formalize.min.js"></script>
+<script  src="catalog/view/javascript/pixo/jquery.elevatezoom.min.js"></script>
+<script  src="catalog/view/javascript/pixo/bootstrap-notify.min.js"></script>  
+<script  src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
+<link rel="stylesheet" type="text/css" href="catalog/view/javascript/jquery/magnific/magnific-popup.css" />
+<script  src="catalog/view/javascript/pixo/tabs.js"></script>
+<script  src="catalog/view/javascript/pixo/jquery.countdown.min.js"></script>
+<script  src="catalog/view/javascript/pixo/jquery.countdown.js"></script>
+<script  src="catalog/view/javascript/pixo/slick.js"></script>
+<script  src="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js"></script>
+
+
+
+<!-- Pixothemes pixothemes.in - End -->
+
+<script src="catalog/view/javascript/common.js" ></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
+
+    <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=59cac521ee7d0' async='true'></script>
+</head>
+
+{% if (column_left and column_right) %}
+{% set layoutclass = 'layout-3' %}
+{% elseif (column_left or column_right) %}
+{% if column_left %}
+{% set layoutclass = 'layout-2 left-col' %}
+{% elseif column_right %}
+{% set layoutclass = 'layout-2 right-col' %}
+{% endif %}
+{% else %}
+{% set layoutclass = 'layout-1' %}
+{% endif %}
+
+<body class="{{ class }} {{ " " }} {{ layoutclass }}">
+<nav id="top">
+  <div class="container">
+      <div class="nav pull-left">
+          <div class="store-timing">
+          We are open: <strong> {{ open_timing }}</strong>
+          </div>
+    </div>
+      <div id="top-links" class="nav pull-right">
+      <ul class="list-inline">
+          <li>{{ default_msg }}</li>
+          <li>
+              <div class="dropdown myaccount"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown">My Account</a>
+                  <span class="account_heading">{{ text_account }}</span> <!-- <span class="caret"></span> -->
+                  <ul class="dropdown-menu dropdown-menu-right myaccount-menu">
+                      {% if logged %}
+                          <li><a href="{{ account }}">{{ text_account }}</a></li>
+                          <li><a href="{{ order }}">{{ text_order }}</a></li>
+                          <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                          <li><a href="{{ download }}">{{ text_download }}</a></li>
+                          <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                      {% else %}
+                          <li><a href="{{ register }}">{{ text_register }}</a></li>
+                          <li><a href="{{ login }}">{{ text_login }}</a></li>
+                      {% endif %}
+                  </ul>
+              </div>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+    <header>
+        <div class="container">
+
+            <div class="header-mid">
+                <div class="header-logo">
+                    <div id="logo">{% if logo %}<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-responsive" /></a>{% else %}
+                        <h1><a href="{{ home }}">{{ name }}</a></h1> {% endif %}
+                    </div>
+                </div>
+
+                <div class="header-cart"> {{ cart }} </div>
+                  {# <div class="dropdown myaccount"><a href="{{ account }}" title="{{ text_account }}" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+                  <span class="account_heading">{{ text_account }}</span> <!-- <span class="caret"></span> -->
+                  <ul class="dropdown-menu dropdown-menu-right myaccount-menu">
+                    {% if logged %}
+                    <li><a href="{{ account }}">{{ text_account }}</a></li>
+                    <li><a href="{{ order }}">{{ text_order }}</a></li>
+                    <li><a href="{{ transaction }}">{{ text_transaction }}</a></li>
+                    <li><a href="{{ download }}">{{ text_download }}</a></li>
+                    <li><a href="{{ logout }}">{{ text_logout }}</a></li>
+                    {% else %}
+                    <li><a href="{{ register }}">{{ text_register }}</a></li>
+                    <li><a href="{{ login }}">{{ text_login }}</a></li>
+                    {% endif %}
+                  <div class="nav pull-left">
+                  {{ currency }}
+                  {{ language }}
+                    </div>
+                  </ul>
+                </div>#}
+
+                <div class="dropdown search">
+                    {{ search }}
+                </div>
+
+                <div id="search-bottom">
+                    <div class="dropdown search">{{ search }}</div>
+                </div>
+
+
+                <div class="content_headercms_top">{{ header_top }}</div>
+            </div>
+        </div>
+        <div id="main-menu-bar" class="container">
+            {{ menu }}
+        </div>
+</header>
+
+      
+      <div class="nav-inner-cms ">
+        <div class="container">
+   <!--     <div class="main-menu" id="cms-menu"> 
+        <ul class="main-navigation">
+      <li class="first level0"><a href="{{ affiliate }}">{{ txt_affiliate }}</a></li>
+            <li class="level0"><a href="{{ manufacturer }}">{{ txt_manufacturer }}</a></li> 
+            <li class="level0"><a href="{{ return }}">{{ txt_return }}</a></li> 
+            <li class="level0"><a href="{{ sitemap }}">{{ txt_sitemap }}</a></li>
+            <li class="last level0"><a href="{{ contact }}">{{ txt_contact }}</a></li>
+            <li class="top_level"> <a href="{{ all_blogs }}">{{ text_blog }}</a></li>
+              
+         </ul>
+     </div> -->    
+</div>
+</div>
+
+
+
+<!-- ======= Quick view JS ========= -->
+<script> 
+
+function quickbox(){
+ if ($(window).width() > 767) {
+    $('.quickview').magnificPopup({
+      type:'iframe',
+      delegate: 'a',
+      preloader: true,
+      tLoading: 'Loading image #%curr%...',
+    });
+ }  
+}
+jQuery(document).ready(function() {quickbox();});
+jQuery(window).resize(function() {quickbox();});
+
+</script>
